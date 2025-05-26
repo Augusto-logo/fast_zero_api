@@ -1,6 +1,6 @@
 from http import HTTPStatus
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 
 from fast_zero.schemas import Message, UserDB, UserList, UserPublic, UserSchema
 
@@ -26,11 +26,6 @@ def create_user(user: UserSchema):
     database.append(user_with_id)
 
     return user_with_id
-
-
-from fastapi import FastAPI, HTTPException
-
-# ...
 
 
 @app.put('/users/{user_id}', response_model=UserPublic)
