@@ -3,7 +3,7 @@ name = "fast_zero"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "dunossauro",email = "mendesxeduardo@gmail.com"}
+    {name = "augusto",email = "augusto2.logo@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
@@ -16,7 +16,9 @@ dependencies = [
     "aiosqlite (>=0.21.0,<0.22.0)",
     "sqlalchemy[asyncio] (>=2.0.41,<3.0.0)",
     "tzdata (>=2025.2,<2026.0)",
-    "psycopg[binary] (>=3.2.9,<4.0.0)"
+    "uvicorn (>=0.34.3,<0.35.0)",
+    "asyncpg (>=0.30.0,<0.31.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)"
 ]
 
 [tool.poetry.group.dev.dependencies]
@@ -28,6 +30,7 @@ httpx = "^0.28.1"
 pytest-asyncio = "^1.0.0"
 factory-boy = "^3.3.3"
 freezegun = "^1.5.2"
+alembic = "^1.16.1"
 
 [tool.ruff]
 line-length = 79
